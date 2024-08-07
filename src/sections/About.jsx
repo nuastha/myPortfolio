@@ -1,6 +1,19 @@
 import AboutImg from "../assets/preview.png";
 
 const About = () => {
+  const skills = [
+    "React",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Tailwind",
+    "Git",
+    "Github",
+    "Figma",
+    "AWS",
+    "Linux",
+  ];
   return (
     <div id="about" className="container mx-auto">
       <section className="container section">
@@ -20,7 +33,15 @@ const About = () => {
               others.
             </p>
             <p>My Tech Stack.</p>
-            <ul>
+            {skills.map((data) => {
+              return (
+                <li key={data.id} className="about-li">
+                  {data}
+                </li>
+              );
+            })}
+
+            {/* <ul>
               <li>
                 React <i className="fa-brands fa-react text-teal-200 "></i>
               </li>
@@ -36,7 +57,7 @@ const About = () => {
               <li>
                 AWS Cloud <i className="fa-brands fa-aws text-red-500"></i>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="secondary-div-2 mt-8">
             <a href="https://www.github.com/nuastha" target="_target">
@@ -55,6 +76,26 @@ const About = () => {
           <img className="about-img" src={AboutImg} alt="" />
         </div>
       </section>
+      <div className="columns-2 ml-8 rounded-md mb-10">
+        <div className="text-right">
+          <h3 className="text-6xl mb-5 text-blue-500">Contact Us</h3>
+          <p>fill the form</p>
+          <p>for get more info about the dream to reality </p>
+          <p>for business leads and website.</p>
+          <p> thank you for your visiting.</p>
+        </div>
+        <iframe
+          src="https://ggrelativity.xyz/lead-form/c4ca4238a0b923820dcc509a6f75849b"
+          width="100%"
+          height="500px"
+          frameBorder="0"
+          className="rounded-lg resize-none "
+          sandbox="allow-forms allow-modals"
+          allow="none"
+          referrerPolicy="no-referrer"
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   );
 };

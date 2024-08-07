@@ -1,12 +1,10 @@
 import About from "./About";
 import HeroPIc from "../assets/bg-big.png";
-// import Preloading from "../animation/Preloading";
 
 const Hero = () => {
   return (
     <>
       <div className="hero-main container">
-        {/* <Preloading /> */}
         <div className="main-sub container">
           <div className="sub-1">
             <img src={HeroPIc} className="img-block" loading="lazy" />
