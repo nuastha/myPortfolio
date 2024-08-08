@@ -35,7 +35,7 @@ const About = () => {
             <p>My Tech Stack.</p>
             {skills.map((data) => {
               return (
-                <li key={data.id} className="about-li">
+                <li key={data.id+1} className="about-li">
                   {data}
                 </li>
               );
@@ -76,7 +76,7 @@ const About = () => {
           <img className="about-img" src={AboutImg} alt="" />
         </div>
       </section>
-      <div className="columns-2 ml-8 rounded-md mb-10">
+      <div className="columns-2 ml-8 rounded-md mb-10 iframe">
         <div className="text-right">
           <h3 className="text-6xl mb-5 text-blue-500">Contact Us</h3>
           <p>fill the form</p>
